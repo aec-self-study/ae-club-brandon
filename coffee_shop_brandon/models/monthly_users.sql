@@ -4,9 +4,11 @@
 )}}
 
 select
-  date_trunc(first_order_at, month),
-  count(*)
+	date_trunc(first_order_at, month) AS month_start,
+  	count(*) AS number_new_customers
  
-from {{ ref('customers') }}
+from 
+	{{ref('customers')}}
  
-group by 1
+group by
+	month_start
