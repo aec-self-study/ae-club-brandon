@@ -1,5 +1,9 @@
 -- models/monthly_users.sql
- select
+{{ config(
+    materialized="table"
+)}}
+
+select
   date_trunc(first_order_at, month)
   count(*)
  
