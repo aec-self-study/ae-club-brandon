@@ -4,10 +4,10 @@ with source as (
 
 renamed as (
     select
-        id as order_id,
-        created_at as order_created_at,
+        id,
+        created_at,
         customer_id,
-        total as order_total
+        total
         -- excluded columns
         -- address
         -- state

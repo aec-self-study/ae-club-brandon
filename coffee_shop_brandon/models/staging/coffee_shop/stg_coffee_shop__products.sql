@@ -4,10 +4,10 @@ with source as (
 
 renamed as (
     select
-        id as product_id,
-        name as product_name,
-        category as product_category,
-        created_at as product_created_at
+        id,
+        name,
+        category,
+        created_at
         -- excluded columns
     from source
 )

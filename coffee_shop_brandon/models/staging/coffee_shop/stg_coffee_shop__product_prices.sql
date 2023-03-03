@@ -4,11 +4,11 @@ with source as (
 
 renamed as (
     select
-        id as product_prices_id,
+        id,
         product_id,
-        price as product_price,
-        created_at as product_price_created_at,
-        ended_at as product_price_ended_at
+        price,
+        created_at,
+        ended_at
         -- excluded columns
     from source
 )

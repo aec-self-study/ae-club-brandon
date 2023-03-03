@@ -4,7 +4,7 @@ with source as (
 
 renamed as (
     select
-        id as order_items_id,
+        id,
         order_id,
         product_id
         -- excluded columns
