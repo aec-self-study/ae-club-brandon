@@ -1,4 +1,4 @@
-  {{ config( MATERIALIZED="table" )}}
+  {{ config( materialized = "view" )}}
 SELECT
   orders.id,
   orders.created_at,
