@@ -1,11 +1,11 @@
-  {{ config( MATERIALIZED="table" )}}
+  {{ config( materialized = "view" )}}
 SELECT
   orders.id,
   orders.created_at,
   orders.total,
   products.name,
   products.category,
-  product_prices.price
+  customers.id AS customer_id
 FROM
   {{ ref('stg_coffee_shop__orders') }} AS orders
 LEFT JOIN
